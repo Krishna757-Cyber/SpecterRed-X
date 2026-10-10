@@ -1,0 +1,352 @@
+{
+  "generated_by": "eval.py",
+  "scenarios": [
+    {
+      "id": "S1",
+      "title": "Phishing to Account Takeover",
+      "version_hash": "efcaad99578f6b515be09117284e7dde25f4d363c32655a1f8c4a93c875f9927",
+      "reproducible": true,
+      "baseline": {
+        "config": {
+          "mfa_mode": "none",
+          "user_report_button": "disabled",
+          "link_filtering": "disabled",
+          "session_risk_policy": "disabled",
+          "mailbox_rule_alerting": "disabled"
+        },
+        "resilience_score": 0.0,
+        "components": {
+          "detection": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 5,
+            "na": false
+          },
+          "containment": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 2,
+            "na": false
+          },
+          "prevention": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 4,
+            "na": false
+          },
+          "response_efficiency": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 1,
+            "na": false
+          },
+          "evidence_coverage": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 0,
+            "na": true
+          }
+        },
+        "outcomes": [
+          "succeeded",
+          "succeeded",
+          "succeeded",
+          "succeeded",
+          "succeeded"
+        ],
+        "event_hash": "f07ce875ba84a3dc5624874aae9c6110d9937fd51c99405a0a7056af82dbda39"
+      },
+      "replay": {
+        "control_changes": {
+          "session_risk_policy": "enabled"
+        },
+        "config": {
+          "mfa_mode": "none",
+          "user_report_button": "disabled",
+          "link_filtering": "disabled",
+          "session_risk_policy": "enabled",
+          "mailbox_rule_alerting": "disabled"
+        },
+        "resilience_score": 48.33,
+        "components": {
+          "detection": {
+            "value": 50.0,
+            "numerator": 1,
+            "denominator": 2,
+            "na": false
+          },
+          "containment": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 0,
+            "na": true
+          },
+          "prevention": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 2,
+            "na": false
+          },
+          "response_efficiency": {
+            "value": 75.0,
+            "numerator": 2,
+            "denominator": 5,
+            "na": false
+          },
+          "evidence_coverage": {
+            "value": 100.0,
+            "numerator": 1,
+            "denominator": 1,
+            "na": false
+          }
+        },
+        "outcomes": [
+          "succeeded",
+          "detected",
+          "prevented",
+          "prevented",
+          "prevented"
+        ],
+        "event_hash": "8d79799f15d5ad1ea32938082eee0eb83a0a1fd2dde9ee42d4db9069c2e149a2"
+      },
+      "delta": 48.33,
+      "improved": true,
+      "changed_steps": [
+        "credential_capture",
+        "mfa_fatigue",
+        "session_established",
+        "mailbox_forwarding_rule"
+      ],
+      "verdict": "The replay improved the resilience score by 48.33 points."
+    },
+    {
+      "id": "S2",
+      "title": "Executive Invoice Impersonation (BEC)",
+      "version_hash": "29903b20137df217d542cb03a09a15b161d6e105661172b8cdd7115edf6b4bed",
+      "reproducible": true,
+      "baseline": {
+        "config": {
+          "email_authentication_enforcement": "disabled",
+          "payment_callback_verification": "disabled",
+          "dual_approval": "disabled",
+          "vendor_change_policy": "disabled",
+          "mailbox_rule_alerting": "disabled"
+        },
+        "resilience_score": 0.0,
+        "components": {
+          "detection": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 4,
+            "na": false
+          },
+          "containment": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 3,
+            "na": false
+          },
+          "prevention": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 3,
+            "na": false
+          },
+          "response_efficiency": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 1,
+            "na": false
+          },
+          "evidence_coverage": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 0,
+            "na": true
+          }
+        },
+        "outcomes": [
+          "succeeded",
+          "succeeded",
+          "succeeded",
+          "succeeded"
+        ],
+        "event_hash": "76877e41d9b13b07f82b93f085fd47c8c9d116efe908a096689b5081c587e1d7"
+      },
+      "replay": {
+        "control_changes": {
+          "payment_callback_verification": "enabled"
+        },
+        "config": {
+          "email_authentication_enforcement": "disabled",
+          "payment_callback_verification": "enabled",
+          "dual_approval": "disabled",
+          "vendor_change_policy": "disabled",
+          "mailbox_rule_alerting": "disabled"
+        },
+        "resilience_score": 34.17,
+        "components": {
+          "detection": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 2,
+            "na": false
+          },
+          "containment": {
+            "value": 50.0,
+            "numerator": 1,
+            "denominator": 2,
+            "na": false
+          },
+          "prevention": {
+            "value": 33.33,
+            "numerator": 1,
+            "denominator": 3,
+            "na": false
+          },
+          "response_efficiency": {
+            "value": 33.33,
+            "numerator": 3,
+            "denominator": 4,
+            "na": false
+          },
+          "evidence_coverage": {
+            "value": 100.0,
+            "numerator": 1,
+            "denominator": 1,
+            "na": false
+          }
+        },
+        "outcomes": [
+          "succeeded",
+          "succeeded",
+          "prevented",
+          "prevented"
+        ],
+        "event_hash": "1b69956f85542d5a24056da13c19447e9e3b73f84f1a795d98f9ca1b79c0dd0a"
+      },
+      "delta": 34.17,
+      "improved": true,
+      "changed_steps": [
+        "urgent_payment_request",
+        "funds_transfer"
+      ],
+      "verdict": "The replay improved the resilience score by 34.17 points."
+    },
+    {
+      "id": "S3",
+      "title": "Help-Desk Voice-Clone Impersonation",
+      "version_hash": "408dddebc6aaa3003d39dee49cbfd30e5c410a6918dd2986099c9c54ea79ce65",
+      "reproducible": true,
+      "baseline": {
+        "config": {
+          "helpdesk_identity_verification": "disabled",
+          "callback_verification": "disabled",
+          "reset_cooldown": "disabled",
+          "privileged_action_approval": "disabled",
+          "anomaly_alert": "disabled"
+        },
+        "resilience_score": 0.0,
+        "components": {
+          "detection": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 4,
+            "na": false
+          },
+          "containment": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 3,
+            "na": false
+          },
+          "prevention": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 3,
+            "na": false
+          },
+          "response_efficiency": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 1,
+            "na": false
+          },
+          "evidence_coverage": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 0,
+            "na": true
+          }
+        },
+        "outcomes": [
+          "succeeded",
+          "succeeded",
+          "succeeded",
+          "succeeded"
+        ],
+        "event_hash": "a6f8b4dc53a372b3c24e5b50ea967a4d7c1c15712c70584a5a6ff3c3e6fed35d"
+      },
+      "replay": {
+        "control_changes": {
+          "helpdesk_identity_verification": "enabled"
+        },
+        "config": {
+          "helpdesk_identity_verification": "enabled",
+          "callback_verification": "disabled",
+          "reset_cooldown": "disabled",
+          "privileged_action_approval": "disabled",
+          "anomaly_alert": "disabled"
+        },
+        "resilience_score": 70.0,
+        "components": {
+          "detection": {
+            "value": 0.0,
+            "numerator": 0,
+            "denominator": 1,
+            "na": false
+          },
+          "containment": {
+            "value": 100.0,
+            "numerator": 1,
+            "denominator": 1,
+            "na": false
+          },
+          "prevention": {
+            "value": 100.0,
+            "numerator": 1,
+            "denominator": 1,
+            "na": false
+          },
+          "response_efficiency": {
+            "value": 100,
+            "numerator": 2,
+            "denominator": 4,
+            "na": false
+          },
+          "evidence_coverage": {
+            "value": 100.0,
+            "numerator": 1,
+            "denominator": 1,
+            "na": false
+          }
+        },
+        "outcomes": [
+          "succeeded",
+          "prevented",
+          "prevented",
+          "prevented"
+        ],
+        "event_hash": "60a52236aa8cd84e03b613aaf8a26191170076d6da33d79477195a1080120c0c"
+      },
+      "delta": 70.0,
+      "improved": true,
+      "changed_steps": [
+        "identity_verification_challenge",
+        "callback_verification_step",
+        "mfa_reset"
+      ],
+      "verdict": "The replay improved the resilience score by 70.0 points."
+    }
+  ]
+}

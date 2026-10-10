@@ -1,0 +1,69 @@
+{
+  "source": "mitre-attack/attack-stix-data enterprise-attack",
+  "validated": {
+    "T1566.002": {
+      "id": "T1566.002",
+      "name": "Spearphishing Link",
+      "url": "https://attack.mitre.org/techniques/T1566/002",
+      "deprecated": false,
+      "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems. Spearphishing with a link is a specific variant of spearphishing. It is different from o"
+    },
+    "T1114.003": {
+      "id": "T1114.003",
+      "name": "Email Forwarding Rule",
+      "url": "https://attack.mitre.org/techniques/T1114/003",
+      "deprecated": false,
+      "description": "Adversaries may setup email forwarding rules to collect sensitive information. Adversaries may abuse email forwarding rules to monitor the activities of a victim, steal information, and further gain i"
+    },
+    "T1657": {
+      "id": "T1657",
+      "name": "Financial Theft",
+      "url": "https://attack.mitre.org/techniques/T1657",
+      "deprecated": false,
+      "description": "Adversaries may steal monetary resources from targets through extortion, social engineering, technical theft, or other methods aimed at their own financial gain at the expense of the availability of t"
+    },
+    "T1621": {
+      "id": "T1621",
+      "name": "Multi-Factor Authentication Request Generation",
+      "url": "https://attack.mitre.org/techniques/T1621",
+      "deprecated": false,
+      "description": "Adversaries may attempt to bypass multi-factor authentication (MFA) mechanisms and gain access to accounts by generating MFA requests sent to users."
+    },
+    "T1098": {
+      "id": "T1098",
+      "name": "Account Manipulation",
+      "url": "https://attack.mitre.org/techniques/T1098",
+      "deprecated": false,
+      "description": "Adversaries may manipulate accounts to maintain and/or elevate access to victim systems. Account manipulation may consist of any action that preserves or modifies adversary access to a compromised acc"
+    },
+    "T1078": {
+      "id": "T1078",
+      "name": "Valid Accounts",
+      "url": "https://attack.mitre.org/techniques/T1078",
+      "deprecated": false,
+      "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to by"
+    },
+    "T1566.004": {
+      "id": "T1566.004",
+      "name": "Spearphishing Voice",
+      "url": "https://attack.mitre.org/techniques/T1566/004",
+      "deprecated": false,
+      "description": "Adversaries may use voice communications to ultimately gain access to victim systems. Spearphishing voice is a specific variant of spearphishing. It is different from other forms of spearphishing in t"
+    },
+    "T1656": {
+      "id": "T1656",
+      "name": "Impersonation",
+      "url": "https://attack.mitre.org/techniques/T1656",
+      "deprecated": true,
+      "description": "Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims "
+    },
+    "T1078.004": {
+      "id": "T1078.004",
+      "name": "Cloud Accounts",
+      "url": "https://attack.mitre.org/techniques/T1078/004",
+      "deprecated": false,
+      "description": "Valid accounts in cloud environments may allow adversaries to perform actions to achieve Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Cloud accounts are those created and con"
+    }
+  },
+  "missing": []
+}
