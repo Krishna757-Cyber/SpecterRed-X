@@ -1,0 +1,125 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-obsidian: #080b12;
+  --bg-navy: #0d1220;
+  --surface-elevated: #131a29;
+  --surface-glass: rgba(20, 29, 45, 0.78);
+  --border-subtle: rgba(150, 175, 210, 0.18);
+
+  --brand-cyan: #00d9ff;
+  --brand-violet: #7047ff;
+  --brand-intel: #9b7cff;
+
+  --agent-red: #ff304f;
+  --agent-blue: #278bff;
+
+  --semantic-success: #29d391;
+  --semantic-warning: #ffb547;
+  --text-primary: #f4f7fc;
+  --text-secondary: #a8b3c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 800px at 20% -10%, rgba(112, 71, 255, 0.08), transparent 60%),
+    radial-gradient(1000px 700px at 90% 0%, rgba(0, 217, 255, 0.06), transparent 55%),
+    var(--bg-obsidian);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Visible cyan keyboard-focus ring (never color alone for status) */
+:focus-visible {
+  outline: 2px solid var(--brand-cyan);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 175, 210, 0.2);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 175, 210, 0.35);
+}
+
+@layer components {
+  .glass {
+    background: var(--surface-glass);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .panel {
+    background: linear-gradient(180deg, rgba(19, 26, 41, 0.9), rgba(13, 18, 32, 0.9));
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium;
+    border: 1px solid var(--border-subtle);
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-150;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--brand-cyan), var(--brand-violet));
+    color: #04121a;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 24px rgba(0, 217, 255, 0.35);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
